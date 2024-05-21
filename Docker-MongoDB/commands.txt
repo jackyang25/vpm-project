@@ -1,0 +1,24 @@
+# Building the Docker Image for MongoDB with the dataset
+docker build -t mongo-with-csv .
+
+# Running the MongoDB Container with the dataset
+docker run -d --name sharp_hofstadter -p 27017:27017 mongo-with-csv
+
+# Stopping the MongoDB Container
+docker stop sharp_hofstadter
+
+# Removing the MongoDB Container
+docker rm sharp_hofstadter
+
+# Restarting the MongoDB Container
+docker restart sharp_hofstadter
+
+# Viewing Running Containers
+docker ps
+
+# Viewing All Containers (Running and Stopped)
+docker ps -a
+
+# Viewing Logs of the MongoDB Container
+docker logs sharp_hofstadter
+"""
